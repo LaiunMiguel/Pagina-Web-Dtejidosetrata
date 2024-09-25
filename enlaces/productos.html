@@ -33,7 +33,7 @@ async function cargarPagina(pagina) {
 
     try {
       // Hacemos fetch del archivo JSON
-      const respuesta = await fetch('/data/productos.json');
+      const respuesta = await fetch('../data/productos.json');
       
       // Verificamos si la respuesta es exitosa
       if (!respuesta.ok) {
