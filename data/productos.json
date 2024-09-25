@@ -2,7 +2,7 @@
     {
       "id": 1,
       "nombre": "Coneja de Lana",
-      "imagen": "/images/prod1/1.jpg",
+      "imagen": "../images/prod1/1.jpg",
       "descripcion": [
         "¡Sesión de fotos para esta linda conejita!",
         "Realizada con hilo de algodón en su totalidad, mide aproximadamente 35cm.",
@@ -23,7 +23,7 @@
     {
       "id": 2,
       "nombre": "Merlina",
-      "imagen": "/images/prod2/1.jpg",
+      "imagen": "../images/prod2/1.jpg",
       "descripcion": [
         "Merlina! Tan tierna y tan bonita, aunque lo primero no lo es tanto si conocemos al personaje, jaja",
         "Hecha completamente de hilo de algodón, ojitos de seguridad y con aproximadamente 25cm de alto",
@@ -32,8 +32,8 @@
       ],
       "precio": 15000,
       "galeria": [
-        "/images/prod2/1.jpg",
-        "/images/prod2/2.jpg"
+        "../images/prod2/1.jpg",
+        "../images/prod2/2.jpg"
       ]
     }
 
