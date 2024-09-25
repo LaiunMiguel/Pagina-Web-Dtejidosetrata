@@ -1,0 +1,51 @@
+.productosContenedor{
+    width: 80vw ;
+    height: 100hv;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    border: 10px solid rgb(12, 27, 107);
+}
+
+.productosPaginacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    gap: 20px;
+  }
+  
+.productosPresentacion{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.productosPresentacion a {
+    text-decoration: none;
+}
+
+.productosPresentacion:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+.titulo{
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 2vh, 1.25rem);
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+}
+
+  .imagenMuestra{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  .loading {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #0f0636;
+}

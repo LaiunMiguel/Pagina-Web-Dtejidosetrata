@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/prod.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <title>Coneja de Lana</title>
+  <script defer src="../js/navbar.js"></script>
+</head>
+
+<body>
+  
+  <div class="contenedor">
+    <div class="fotoZoom">
+      <img id="imgActual" class="imagen" src="" alt="Producto">
+    </div>
+    <div class="miniContenedor">
+      <div class="detalles">
+        <div class="titulo"><h1 id="tituloProducto"></h1></div>
+        <div class="descripcion" id="descripcionProducto"></div>
+        <div class="precio">
+          <h1 id="precioProducto"></h1>
+        </div>
+      </div>
+      <div class="galeria">
+        <button class="btn-scroll left" onclick="scrollGallery(-1)">&#8249;</button>
+        <div class="imagenesCont" id="galeriaImagenes"></div>
+        <button class="btn-scroll right" onclick="scrollGallery(1)">&#8250;</button>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  const hash = window.location.hash.substring(1); // Elimina el '#'
+  const params = new URLSearchParams(hash);
+  let  productoId = params.get('id');
+  productoId = Number(productoId);
+    fetch('../data/productos.json')
+      .then(response => response.json())
+      .then(productos => {
+        const producto = productos.find(p => p.id === productoId);
+
+        // Actualiza la imagen principal
+        document.getElementById('imgActual').src = producto.imagen;
+
+        // Actualiza el título del producto
+        document.getElementById('tituloProducto').innerText = producto.nombre;
+
+        // Rellena la descripción
+        const descripcion = document.getElementById('descripcionProducto');
+        producto.descripcion.forEach(linea => {
+          const p = document.createElement('p');
+          p.innerText = linea;
+          descripcion.appendChild(p);
+        });
+
+        // Actualiza el precio
+        document.getElementById('precioProducto').innerText = `Precio: $${producto.precio}`;
+
+        // Actualiza la galería de imágenes
+        const galeria = document.getElementById('galeriaImagenes');
+        producto.galeria.forEach((imagen, index) => {
+          const img = document.createElement('img');
+          img.src = imagen;
+          img.classList.add('miniImagen');
+          img.onclick = () => actualizarImagen(index + 1);
+          galeria.appendChild(img);
+        });
+      });
+
+function actualizarImagen(num) {
+  // Cambia la fuente de la imagen principal según el número de la miniatura clicada
+  const imgActual = document.getElementById('imgActual');
+  imgActual.src = `../images/prod${productoId}/${num}.jpg`; // Cambia la ruta de la imagen
+}
+
+function scrollGallery(direction) {
+  const gallery = document.querySelector('.imagenesCont');
+  const scrollAmount = gallery.clientWidth * 0.3; // Desplaza el 50% del ancho de la galería
+
+  // Desplaza hacia la izquierda o derecha según la dirección
+  gallery.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+  });
+}
+</script>
+</body>
+</html>

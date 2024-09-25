@@ -1,0 +1,41 @@
+[
+    {
+      "id": 1,
+      "nombre": "Coneja de Lana",
+      "imagen": "/images/prod1/1.jpg",
+      "descripcion": [
+        "¡Sesión de fotos para esta linda conejita!",
+        "Realizada con hilo de algodón en su totalidad, mide aproximadamente 35cm.",
+        "Tiene ojitos de seguridad (apta para bebés y niños pequeños).",
+        "Está rellena con vellón siliconado. Podés pedirla en los colores que desees.",
+        "#amigurumis #amigurumi #conejita #crochet"
+      ],
+      "precio": 20000,
+      "galeria": [
+        "/images/prod1/1.jpg",
+        "/images/prod1/2.jpg",
+        "/images/prod1/3.jpg",
+        "/images/prod1/4.jpg",
+        "/images/prod1/5.jpg",
+        "/images/prod1/6.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Merlina",
+      "imagen": "/images/prod2/1.jpg",
+      "descripcion": [
+        "Merlina! Tan tierna y tan bonita, aunque lo primero no lo es tanto si conocemos al personaje, jaja",
+        "Hecha completamente de hilo de algodón, ojitos de seguridad y con aproximadamente 25cm de alto",
+        " ha llegado para conquistar sus corazones. 🖤",
+        "#merlina #crochet #amigurumis"
+      ],
+      "precio": 15000,
+      "galeria": [
+        "/images/prod2/1.jpg",
+        "/images/prod2/2.jpg"
+      ]
+    }
+
+    
+]

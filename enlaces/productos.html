@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/productos.css">
+  <title>Dtejidosetrata</title>
+  <script defer src="../js/navbar.js"></script>
+</head>
+<body>
+
+  
+  <div class="productosContenedor">
+    <div class="productosPaginacion" id="productosContainer">
+    </div>
+    
+
+  <button onclick="cargarPagina()">Anterior</button>
+  <button onclick="cargarPagina()">Siguiente</button>
+  </div>
+  
+
+<script>
+let paginaActual = 1;
+const productosPorPagina = 9;
+
+async function cargarPagina(pagina) {
+    paginaActual = pagina;
+    const inicio = (paginaActual - 1) * productosPorPagina;
+    const fin = inicio + productosPorPagina;
+
+    try {
+      // Hacemos fetch del archivo JSON
+      const respuesta = await fetch('/data/productos.json');
+      
+      // Verificamos si la respuesta es exitosa
+      if (!respuesta.ok) {
+          throw new Error(`Error al cargar productos: ${respuesta.statusText}`);
+      }
+
+      // Parseamos la respuesta como JSON
+      const productos = await respuesta.json();
+
+      // Mostramos solo los productos que están en la página actual
+      const productosAPresentar = productos.slice(inicio, fin);
+      
+      // Llamamos a la función para renderizar los productos en la página
+      renderizarProductos(productosAPresentar);
+      
+  } catch (error) {
+      console.error("Error al cargar los productos:", error);
+  }
+}
+
+function renderizarProductos(productos) {
+    const contenedor = document.getElementById('productosContainer');
+    contenedor.innerHTML = ''; // Limpia el contenedor
+
+    productos.forEach(producto => {
+      const productoDiv = document.createElement('div');
+      productoDiv.classList.add('productosPresentacion'); // Agrega la clase
+  
+      productoDiv.innerHTML = `
+          <a href="../enlaces/prod.html#id=${producto.id}&nombre=${producto.nombre}">
+              <img src="${producto.imagen}" alt="${producto.nombre}" class="imagenMuestra">
+              <div class="titulo">${producto.nombre}</div>
+          </a>
+      `;
+  
+      // Asumiendo que tienes un contenedor para los productos
+      document.getElementById('productosContainer').appendChild(productoDiv);
+  });
+ 
+}
+// Cargar la primera página al cargar el script
+document.addEventListener('DOMContentLoaded', () => {
+  cargarPagina(paginaActual); // Llamamos a cargarPagina dentro de un evento
+});
+</script>
+</body>
+
+</html>

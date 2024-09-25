@@ -1,0 +1,41 @@
+body {
+    background-image: url("../images/fondo.webp");
+    background-size: cover;
+    background-position: center; 
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #0f0636;
+    padding: 1vh ;
+  }
+
+  .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+  }
+
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+  }
+
+  .logo{
+    width: auto; /* Cambia esto a un tamaño adecuado */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente */
+    text-align: center;
+  }
+
+  .logo-img {
+    width: auto; /* O cualquier valor que necesites */
+    height: 10vh; /* Mantiene la proporción */
+  }
+
+  
+  
