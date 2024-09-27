@@ -12,13 +12,13 @@ body {
     display: flex;
     align-items: center;
     background-color: #0f0636;
-    padding: 1vh ;
+    padding: 1vh;
   }
 
   .nav-links {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 2vw;
   }
 
   .nav-links a {
@@ -27,15 +27,35 @@ body {
   }
 
   .logo{
-    width: auto; /* Cambia esto a un tamaño adecuado */
-    height: auto; /* Permite que la altura se ajuste proporcionalmente */
-    text-align: center;
+    width: fit-content;
+    height: fit-content;
   }
 
   .logo-img {
     width: auto; /* O cualquier valor que necesites */
-    height: 10vh; /* Mantiene la proporción */
+    height: 15vh; /* Mantiene la proporción */
   }
+
+@media (max-width: 800px) {
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #0f0636;
+    padding: 1vw ;
+  }
+
+  .nav-links {
+      list-style: none;
+      display: flex;      
+  }
+
+  .logo-img {
+    width: auto; /* O cualquier valor que necesites */
+    height: 5vh; /* Mantiene la proporción */
+  }
+
+}
 
   
   

@@ -1,13 +1,13 @@
   h1 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-size: clamp(2rem, 4vw, 2.10rem);
+    font-size: clamp(1.50rem, 2vw, 2rem);
     color: #ffffff;
   }
 
   p {
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1rem, 1vw, 1.25rem);
     line-height: 1;
     color: #ffffff; 
     text-align: center;
@@ -23,7 +23,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
     width: 90vw;
-    height: 85vh;
+    height: 78vh;
     margin-top: 3vh;
     margin-left: 5vw;
     gap: 1vw;
@@ -33,7 +33,7 @@
   .fotoZoom {
 
     width: fit-content;
-    height: 85vh;
+    height: 78vh;
     text-align: center;
     background-color: rgb(19, 18, 114);
 
@@ -52,10 +52,10 @@
 
   .miniContenedor {
     
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-column: auto, 1fr;
     width: 100%;
-    height: 85vh;
+    height: 78vh;
     gap: 1vh;
  }
  
@@ -66,8 +66,8 @@
     background-color: rgb(19, 18, 114);
     display: flex;
     flex-direction: column;
-    width: 55vw;
-    height: auto; 
+    width: 100%;
+    height: 100%;
   }
 
   .titulo {
@@ -93,8 +93,8 @@
     background-color: rgb(19, 18, 114);
     border: 5px solid rgb(19, 18, 114);
     display: flex;
-    width: 55vw;
-    height: auto;
+    width: 100%;
+    height: 55%;
     position: relative; /* Necesario para que los botones se posicionen respecto a este contenedor */
     overflow: hidden; /* Esconde el desbordamiento de las imágenes */
 }
@@ -106,7 +106,7 @@
     gap: 1%; /* Espaciado entre imágenes */
 }
 
-  .miniImagen {
+.miniImagen {
     min-width: 25%;
     height: auto;
     object-fit: cover;
@@ -154,7 +154,7 @@
 
 
  /* Ajuste para dispositivos celulares */
- @media (max-width: 900px) {
+ @media (max-width: 800px) {
 
   h1 {
     font-family: 'Poppins', sans-serif;
@@ -168,62 +168,70 @@
     font-size: clamp(0.7rem, 2vw, 1.6rem);
     color: #ffffff; 
     text-align: center;
-  }
-
-
-  .contenedor {
-    display: grid;
-    grid-template-columns: 50vw 45vw;
-    width: 95vw;
-    height: 85vh;
-    margin-top: 15vh;
-    margin-left: 1vw;
-    gap: 1vw;
-  }
+  } 
   
-  .fotoZoom {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    position: relative;
+    height: auto; /* Ajustar la altura en móviles */
+    gap: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  
+    .fotoZoom {
+      height: fit-content;
+      height: fit-content;
+      background-color: #00000000;
+    }
+  
+    .imagen {
+      width: 100%;
+      height: auto;
+    }
+
+    .miniContenedor {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vh;
+      width: 100%;
+      height: 100%
+   }
+   
+    .detalles{
+      order: 2;
       width: 100%;
       height: fit-content;
-      background-color: rgba(255, 255, 255, 0);
-  }
-
-  .imagen {
-      box-sizing: border-box;
-      border: 5px inset #854008;
-      width: 100%;
-      height: auto; 
-      max-width: 100%;
-  }
-
-  .miniContenedor {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 85vh;
-
- }
- 
-
-  .detalles{
+    }
     
-    border-radius: 8px;
-    box-sizing: border-box;
-    background-color: rgb(19, 18, 114);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto; 
+    .galeria {
+      order: 1;
+      width: 100%;
+      height: 10vh;
   }
+
+    .imagenesCont {
+      display: flex;
+      gap: 1vw; /* Espaciado entre imágenes */
+  }
+
+  .miniImagen {
+      min-width: 25%;
+      height: auto;
+      object-fit: cover;
+      border: 1px solid #ddd; 
+      background-color: white;
+  }
+
+  .miniImagen:hover {
+      object-fit: cover; 
+      border: 1px solid #000000;
+      background-color: white;
+  }
+
+
   
-  .galeria {
-    box-sizing: border-box;
-    border-radius: 8px;
-    background-color: rgb(19, 18, 114);
-    border: 5px solid rgb(19, 18, 114);
-    display: flex;
-    width: 100%;
-    height: auto;
-    position: relative; /* Necesario para que los botones se posicionen respecto a este contenedor */
-    overflow: hidden; /* Esconde el desbordamiento de las imágenes */
 }
-}
+

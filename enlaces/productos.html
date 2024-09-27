@@ -15,11 +15,12 @@
   <div class="productosContenedor">
     <div class="productosPaginacion" id="productosContainer">
     </div>
-    
-
-  <button onclick="cargarPagina()">Anterior</button>
-  <button onclick="cargarPagina()">Siguiente</button>
   </div>
+  <div class="contBotones">
+    <button class="boton der" onclick="cargarPagina()">&#8249</button>
+    <button class="boton izq" onclick="cargarPagina()">&#8250</button>
+  </div>
+  
   
 
 <script>
@@ -64,8 +65,14 @@ function renderizarProductos(productos) {
   
       productoDiv.innerHTML = `
           <a href="../enlaces/prod.html#id=${producto.id}&nombre=${producto.nombre}">
+            <div class = "cartaPresentacion">
+              <div>
               <img src="${producto.imagen}" alt="${producto.nombre}" class="imagenMuestra">
+              </div>
+              <div>
               <div class="titulo">${producto.nombre}</div>
+              </div>
+            </div>
           </a>
       `;
   

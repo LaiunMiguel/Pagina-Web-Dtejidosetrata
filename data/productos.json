@@ -35,6 +35,25 @@
         "../images/prod2/1.jpg",
         "../images/prod2/2.jpg"
       ]
+    },
+    {
+      "id": 3,
+      "nombre": "Ansiedad",
+      "imagen": "../images/prod3/1.jpg",
+      "descripcion": [
+        "Llegó Ansiedad, y no quería publicarla antes de ver la película! (Me encantó)",
+        "El día que la empecé no quería dormir sin terminarla.😂",
+        "Con aproximadamente 25cm de alto, realizada en su totalidad con lana hipoalergénica, ojitos de seguridad y rellena de vellón siliconado.",
+        "Incluye su maleta porque vino para quedarse y hay que saber darle su lugar.✨",
+        "#amigurumis #crochet #intensamente2 #amigurumis"
+      ],
+      "precio": 15000,
+      "galeria": [
+        "../images/prod3/1.jpg",
+        "../images/prod3/2.jpg",
+        "../images/prod3/3.jpg",
+        "../images/prod3/4.jpg"
+      ]
     }
 
     

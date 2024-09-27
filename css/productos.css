@@ -1,22 +1,24 @@
 .productosContenedor{
     width: 80vw ;
     height: 100hv;
-    margin-top: 10vh;
+    margin-top: 8vh;
     margin-left: 10vw;
-    border: 10px solid rgb(12, 27, 107);
 }
 
 .productosPaginacion {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) ;
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
   }
   
 .productosPresentacion{
     display: flex;
-    flex-direction: row;
     width: 100%;
     height: 100%;
+}
+
+.cartaPresentacion{
+  background-color: aliceblue;
+  padding:  2vh;
 }
 
 .productosPresentacion a {
@@ -37,9 +39,29 @@
 }
 
   .imagenMuestra{
-    width: auto;
+    width: 20vw;
     max-width: 100%;
     height: auto;
+  }
+
+  .contBotones{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    width: fit-content;
+    height: fit-content;
+  }
+
+
+
+  .boton{
+    background-color: rgba(0, 0, 255, 0.329);
+    width:40px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 1000;
+    border-radius: 50%;
+    color: black;
   }
 
 
@@ -48,4 +70,47 @@
     margin: 20px 0;
     font-size: 1.5rem;
     color: #0f0636;
+}
+
+@media (max-width: 800px) {
+
+  .productosContenedor{
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productosPaginacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .productosPresentacion{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    left: 10vw;
+  }
+
+.titulo{
+    font-size: clamp(1rem, 5vw, 1.60rem);
+    text-align: center;
+    text-decoration: none;
+}
+
+  .imagenMuestra{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    max-width: 100%;
+    height: auto;
+  }
+ 
+
+
+
+
+
+
 }
