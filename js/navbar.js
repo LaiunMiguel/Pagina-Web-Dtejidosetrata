@@ -1,27 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
   const navbar = `
-    <nav id="navbar" class="navbar">
-      <div class="logo">
-        <a href="../"><img src="../images/logo.jpg" alt="Logo" class="logo-img"></a> <!-- Ruta relativa desde un subdirectorio -->
-      </div>
-      <ul class="nav-links">
-        <div>
-        <li><a href="../">Inicio</a></li>
+    <header>
+      <nav id="navbar" class="navbar">
+        <div class="logo">
+          <a href="../"><img src="../images/logo.jpg" alt="Logo" class="logo-img"></a> <!-- Ruta relativa desde un subdirectorio -->
         </div>
-        <div>
-        <li><a href="../enlaces/productos.html">Productos</a></li>
-        </div>
-        <div>
-        <li><a href="../enlaces/sobreMi.html">Sobre mi</a></li>
-        </div>
-        <div>
-        <li><a href="../enlaces/contacto.html">Contactame</a></li>
-        </div>
-        <div>
-        <li><a href="https://www.instagram.com/dtejidosetrata/?hl=es-es" target="_blank">Instagram</a></li>
-        </div>
-      </ul>
-    </nav>
+        <ul class="nav-links">
+          <li><a href="../">Inicio</a></li>
+          <li><a href="../enlaces/productos.html">Productos</a></li>
+          <li><a href="../enlaces/sobreMi.html">Sobre mí</a></li>
+          <li><a href="../enlaces/contacto.html">Contáctame</a></li>
+          <li><a href="https://www.instagram.com/dtejidosetrata/?hl=es-es" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </nav>
+    </header>
   `;
   document.body.insertAdjacentHTML('afterbegin', navbar);
 });

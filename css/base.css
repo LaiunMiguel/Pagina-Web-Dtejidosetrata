@@ -1,7 +1,7 @@
 body {
+    font-family: 'Poppins', sans-serif;
     background-image: url("../images/fondo.webp");
     background-size: cover;
-    background-position: center; 
   }
   
   h1 {
@@ -33,10 +33,15 @@ body {
 
   .logo-img {
     width: auto; /* O cualquier valor que necesites */
-    height: 15vh; /* Mantiene la proporción */
+    height: 10vh; /* Mantiene la proporción */
   }
 
 @media (max-width: 800px) {
+
+  body{
+    background-image: url("../images/fondoCelular.jpg");
+    background-size: cover;
+  }
 
   .navbar {
     display: flex;
@@ -51,8 +56,8 @@ body {
   }
 
   .logo-img {
-    width: auto; /* O cualquier valor que necesites */
-    height: 5vh; /* Mantiene la proporción */
+    width: auto;
+    height: 5vh;
   }
 
 }
